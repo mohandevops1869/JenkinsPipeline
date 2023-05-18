@@ -2,12 +2,10 @@ pipeline {
     agent any
     tool name: 'MAVEN', type: 'maven'
     stages {
-        stage('Build') {
+        stage('Maven Build') {
             steps {
-                //
+             sh 'mvn clean install'
             }
         }
-       
-       
     }
 }
